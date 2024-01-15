@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   hello:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout code
         uses: actions/checkout@v2   # owner is actions and repo is checkout (can use any release version,branch or commit), containing src code of that action, github clones it and runs it, what is how is written in action.yml of that repo

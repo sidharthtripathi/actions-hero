@@ -1,0 +1,26 @@
+name: Hello world workflow
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  hello:
+    runs-on: ubuntu:latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2   # owner is actions and repo is checkout (can use any release version,branch or commit), containing src code of that action, github clones it and runs it, what is how is written in action.yml of that repo
+      
+      - name: hello world
+        run: echo "hello world"
+        shell: bash
+  
+
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: good bye world
+        run: echo "good bye"
+        shell: bash
